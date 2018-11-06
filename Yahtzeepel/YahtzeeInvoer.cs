@@ -31,6 +31,25 @@ namespace Yahtzeepel
         //
         //Methodes
         //
+        private void DisEnableCheckboxes(bool enable)
+        {
+            if (enable)
+            {
+                chbB1.Enabled = true;
+                chbB2.Enabled = true;
+                chbB3.Enabled = true;
+                chbB4.Enabled = true;
+                chbB5.Enabled = true;
+            }
+            else if(enable == false)
+            {
+                chbB1.Enabled = false;
+                chbB2.Enabled = false;
+                chbB3.Enabled = false;
+                chbB4.Enabled = false;
+                chbB5.Enabled = false;
+            }
+        }
         private void DiceRol()
         {
             result1 = rnd.Next(1, 7);
@@ -64,6 +83,7 @@ namespace Yahtzeepel
                 btnKlaar.Enabled = false;
                 pnlScore.Visible = true;
                 pnlScore.Enabled = true;
+                DisEnableCheckboxes(false);
             }
 
         }
@@ -181,22 +201,22 @@ namespace Yahtzeepel
             }
             if (rdbKleineStraat.Checked)
             {
-                byte een = 0;
-                byte twee = 0;
-                byte drie = 0;
-                byte vier = 0;
-                byte vijf = 0;
-                byte zes = 0;
+                int een = 0;
+                int twee = 0;
+                int drie = 0;
+                int vier = 0;
+                int vijf = 0;
+                int zes = 0;
                 foreach(int dice in Dices)
                 {
-                    if (dice == 1) een++;
-                    if (dice == 2) twee++;
-                    if (dice == 3) drie++;
-                    if (dice == 4) vier++;
-                    if (dice == 5) vijf++;
-                    if (dice == 6) zes++;
+                    if (dice == 1) een = een + 1;
+                    if (dice == 2) twee = twee + 1;
+                    if (dice == 3) drie = drie + 1;
+                    if (dice == 4) vier = vier +1;
+                    if (dice == 5) vijf = vijf +1;
+                    if (dice == 6) zes = zes +1;
                 }
-                if ((een > 0 && twee > 0 && drie > 0 && vier > 0) || (twee > 0 && drie > 0 && vier > 0 && vijf > 0))
+                if (een > 0 && twee > 0 && drie > 0 && vier > 0 || twee > 0 && drie > 0 && vier > 0 && vijf > 0 || drie > 0 && vier > 0 && vijf > 0 && zes > 0)
                 {
                     Out = 30;
                     lblKleineStraatOut.Text = Out.ToString();
@@ -207,22 +227,22 @@ namespace Yahtzeepel
             }
             if (rdbGroteStraat.Checked)
             {
-                byte een = 0;
-                byte twee = 0;
-                byte drie = 0;
-                byte vier = 0;
-                byte vijf = 0;
-                byte zes = 0;
+                int een = 0;
+                int twee = 0;
+                int drie = 0;
+                int vier = 0;
+                int vijf = 0;
+                int zes = 0;
                 foreach (int dice in Dices)
                 {
-                    if (dice == 1) een++;
-                    if (dice == 2) twee++;
-                    if (dice == 3) drie++;
-                    if (dice == 4) vier++;
-                    if (dice == 5) vijf++;
-                    if (dice == 6) zes++;
+                    if (dice == 1) een = een + 1;
+                    if (dice == 2) twee = twee + 1;
+                    if (dice == 3) drie = drie + 1;
+                    if (dice == 4) vier = vier + 1;
+                    if (dice == 5) vijf = vijf + 1;
+                    if (dice == 6) zes = zes + 1;
                 }
-                if (een > 0 && twee > 0 && drie > 0 && vier > 0 && vijf > 0)
+                if (een > 0 && twee > 0 && drie > 0 && vier > 0 && vijf > 0 || twee > 0 && drie > 0 && vier > 0 && vijf > 0 && zes > 0)
                 {
                     Out = 40;
                     lblGroteStraatOut.Text = Out.ToString();
@@ -270,23 +290,25 @@ namespace Yahtzeepel
                 chbB3.Checked = false;
                 chbB4.Checked = false;
                 chbB5.Checked = false;
+                DisEnableCheckboxes(false);
             }
             else if (inputFout)
             {
                 MessageBox.Show("Verkeerde invoer!");
             }
 
+
         }
         private bool checkDuplicates(int nummer_of_multiples)
         { 
             int check = nummer_of_multiples;
-            byte Tel = 0;
-            byte een = 0;
-            byte twee = 0;
-            byte drie = 0;
-            byte vier = 0;
-            byte vijf = 0;
-            byte zes = 0;
+            int Tel = 0;
+            int een = 0;
+            int twee = 0;
+            int drie = 0;
+            int vier = 0;
+            int vijf = 0;
+            int zes = 0;
             int dice1 = int.Parse(lblD1.Text);
             int dice2 = int.Parse(lblD2.Text);
             int dice3 = int.Parse(lblD3.Text);
@@ -295,6 +317,7 @@ namespace Yahtzeepel
             int[] Dices = { dice1, dice2, dice3, dice4, dice5 };
             foreach(int dice in Dices)
             {
+   
                 if (dice == 1) een++;
                 if (dice == 2) twee++;
                 if (dice == 3) drie++;
@@ -303,16 +326,8 @@ namespace Yahtzeepel
                 if (dice == 6) zes++;
                 Tel++;
             }
-            if (Tel == 5)
-            {
-                if (een == check) return true;
-                if (twee == check) return true;
-                if (drie == check) return true;
-                if (vier == check) return true;
-                if (vijf == check) return true;
-                if (zes == check) return true;
-            }
-            return false;
+            if (een == check || twee == check || drie == check || vier == check || vijf == check || zes == check) return true;
+            else return false;
         }
 
         //
@@ -322,6 +337,7 @@ namespace Yahtzeepel
         {
             rolCount++;
             DiceRol();
+            DisEnableCheckboxes(true);
         }
 
         private void btnKlaar_Click(object sender, EventArgs e)

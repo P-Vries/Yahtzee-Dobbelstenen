@@ -58,6 +58,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblChanceOut = new System.Windows.Forms.Label();
+            this.lblTweeenOut = new System.Windows.Forms.Label();
+            this.lblYahtzeeOut = new System.Windows.Forms.Label();
+            this.lblGroteStraatOut = new System.Windows.Forms.Label();
+            this.lblKleineStraatOut = new System.Windows.Forms.Label();
+            this.lblFullhouseOut = new System.Windows.Forms.Label();
+            this.lblCareOut = new System.Windows.Forms.Label();
+            this.lblTOAKOut = new System.Windows.Forms.Label();
+            this.lblZessenOut = new System.Windows.Forms.Label();
+            this.lblVijfenOut = new System.Windows.Forms.Label();
+            this.lblVierenOut = new System.Windows.Forms.Label();
+            this.lblDrienOut = new System.Windows.Forms.Label();
+            this.lblEnenOut = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,19 +83,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblEnenOut = new System.Windows.Forms.Label();
-            this.lblDrienOut = new System.Windows.Forms.Label();
-            this.lblVierenOut = new System.Windows.Forms.Label();
-            this.lblVijfenOut = new System.Windows.Forms.Label();
-            this.lblZessenOut = new System.Windows.Forms.Label();
-            this.lblTOAKOut = new System.Windows.Forms.Label();
-            this.lblCareOut = new System.Windows.Forms.Label();
-            this.lblFullhouseOut = new System.Windows.Forms.Label();
-            this.lblKleineStraatOut = new System.Windows.Forms.Label();
-            this.lblGroteStraatOut = new System.Windows.Forms.Label();
-            this.lblYahtzeeOut = new System.Windows.Forms.Label();
-            this.lblTweeenOut = new System.Windows.Forms.Label();
-            this.lblChanceOut = new System.Windows.Forms.Label();
             this.pnlScore.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -141,6 +141,7 @@
             // chbB1
             // 
             this.chbB1.AutoSize = true;
+            this.chbB1.Enabled = false;
             this.chbB1.Location = new System.Drawing.Point(18, 43);
             this.chbB1.Name = "chbB1";
             this.chbB1.Size = new System.Drawing.Size(75, 17);
@@ -151,6 +152,7 @@
             // chbB2
             // 
             this.chbB2.AutoSize = true;
+            this.chbB2.Enabled = false;
             this.chbB2.Location = new System.Drawing.Point(99, 43);
             this.chbB2.Name = "chbB2";
             this.chbB2.Size = new System.Drawing.Size(75, 17);
@@ -161,6 +163,7 @@
             // chbB3
             // 
             this.chbB3.AutoSize = true;
+            this.chbB3.Enabled = false;
             this.chbB3.Location = new System.Drawing.Point(180, 43);
             this.chbB3.Name = "chbB3";
             this.chbB3.Size = new System.Drawing.Size(75, 17);
@@ -171,6 +174,7 @@
             // chbB4
             // 
             this.chbB4.AutoSize = true;
+            this.chbB4.Enabled = false;
             this.chbB4.Location = new System.Drawing.Point(261, 43);
             this.chbB4.Name = "chbB4";
             this.chbB4.Size = new System.Drawing.Size(75, 17);
@@ -181,6 +185,7 @@
             // chbB5
             // 
             this.chbB5.AutoSize = true;
+            this.chbB5.Enabled = false;
             this.chbB5.Location = new System.Drawing.Point(343, 43);
             this.chbB5.Name = "chbB5";
             this.chbB5.Size = new System.Drawing.Size(75, 17);
@@ -225,11 +230,11 @@
             // 
             // btnBereken
             // 
-            this.btnBereken.Location = new System.Drawing.Point(123, 184);
+            this.btnBereken.Location = new System.Drawing.Point(3, 184);
             this.btnBereken.Name = "btnBereken";
-            this.btnBereken.Size = new System.Drawing.Size(75, 23);
+            this.btnBereken.Size = new System.Drawing.Size(205, 23);
             this.btnBereken.TabIndex = 26;
-            this.btnBereken.Text = "Bereken";
+            this.btnBereken.Text = "Score vastleggen";
             this.btnBereken.UseVisualStyleBackColor = true;
             this.btnBereken.Click += new System.EventHandler(this.btnBereken_Click);
             // 
@@ -438,6 +443,119 @@
             this.panel2.Size = new System.Drawing.Size(127, 204);
             this.panel2.TabIndex = 40;
             // 
+            // lblChanceOut
+            // 
+            this.lblChanceOut.AutoSize = true;
+            this.lblChanceOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblChanceOut.Location = new System.Drawing.Point(12, 185);
+            this.lblChanceOut.Name = "lblChanceOut";
+            this.lblChanceOut.Size = new System.Drawing.Size(0, 13);
+            this.lblChanceOut.TabIndex = 12;
+            // 
+            // lblTweeenOut
+            // 
+            this.lblTweeenOut.AutoSize = true;
+            this.lblTweeenOut.ForeColor = System.Drawing.Color.Black;
+            this.lblTweeenOut.Location = new System.Drawing.Point(12, 12);
+            this.lblTweeenOut.Name = "lblTweeenOut";
+            this.lblTweeenOut.Size = new System.Drawing.Size(0, 13);
+            this.lblTweeenOut.TabIndex = 11;
+            // 
+            // lblYahtzeeOut
+            // 
+            this.lblYahtzeeOut.AutoSize = true;
+            this.lblYahtzeeOut.Location = new System.Drawing.Point(12, 172);
+            this.lblYahtzeeOut.Name = "lblYahtzeeOut";
+            this.lblYahtzeeOut.Size = new System.Drawing.Size(0, 13);
+            this.lblYahtzeeOut.TabIndex = 10;
+            // 
+            // lblGroteStraatOut
+            // 
+            this.lblGroteStraatOut.AutoSize = true;
+            this.lblGroteStraatOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblGroteStraatOut.Location = new System.Drawing.Point(12, 159);
+            this.lblGroteStraatOut.Name = "lblGroteStraatOut";
+            this.lblGroteStraatOut.Size = new System.Drawing.Size(0, 13);
+            this.lblGroteStraatOut.TabIndex = 9;
+            // 
+            // lblKleineStraatOut
+            // 
+            this.lblKleineStraatOut.AutoSize = true;
+            this.lblKleineStraatOut.Location = new System.Drawing.Point(12, 146);
+            this.lblKleineStraatOut.Name = "lblKleineStraatOut";
+            this.lblKleineStraatOut.Size = new System.Drawing.Size(0, 13);
+            this.lblKleineStraatOut.TabIndex = 8;
+            // 
+            // lblFullhouseOut
+            // 
+            this.lblFullhouseOut.AutoSize = true;
+            this.lblFullhouseOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblFullhouseOut.Location = new System.Drawing.Point(12, 133);
+            this.lblFullhouseOut.Name = "lblFullhouseOut";
+            this.lblFullhouseOut.Size = new System.Drawing.Size(0, 13);
+            this.lblFullhouseOut.TabIndex = 7;
+            // 
+            // lblCareOut
+            // 
+            this.lblCareOut.AutoSize = true;
+            this.lblCareOut.Location = new System.Drawing.Point(12, 120);
+            this.lblCareOut.Name = "lblCareOut";
+            this.lblCareOut.Size = new System.Drawing.Size(0, 13);
+            this.lblCareOut.TabIndex = 6;
+            // 
+            // lblTOAKOut
+            // 
+            this.lblTOAKOut.AutoSize = true;
+            this.lblTOAKOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTOAKOut.Location = new System.Drawing.Point(12, 107);
+            this.lblTOAKOut.Name = "lblTOAKOut";
+            this.lblTOAKOut.Size = new System.Drawing.Size(0, 13);
+            this.lblTOAKOut.TabIndex = 5;
+            // 
+            // lblZessenOut
+            // 
+            this.lblZessenOut.AutoSize = true;
+            this.lblZessenOut.Location = new System.Drawing.Point(12, 64);
+            this.lblZessenOut.Name = "lblZessenOut";
+            this.lblZessenOut.Size = new System.Drawing.Size(0, 13);
+            this.lblZessenOut.TabIndex = 4;
+            // 
+            // lblVijfenOut
+            // 
+            this.lblVijfenOut.AutoSize = true;
+            this.lblVijfenOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblVijfenOut.Location = new System.Drawing.Point(12, 51);
+            this.lblVijfenOut.Name = "lblVijfenOut";
+            this.lblVijfenOut.Size = new System.Drawing.Size(0, 13);
+            this.lblVijfenOut.TabIndex = 3;
+            // 
+            // lblVierenOut
+            // 
+            this.lblVierenOut.AutoSize = true;
+            this.lblVierenOut.ForeColor = System.Drawing.Color.Black;
+            this.lblVierenOut.Location = new System.Drawing.Point(12, 38);
+            this.lblVierenOut.Name = "lblVierenOut";
+            this.lblVierenOut.Size = new System.Drawing.Size(0, 13);
+            this.lblVierenOut.TabIndex = 2;
+            // 
+            // lblDrienOut
+            // 
+            this.lblDrienOut.AutoSize = true;
+            this.lblDrienOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDrienOut.Location = new System.Drawing.Point(12, 25);
+            this.lblDrienOut.Name = "lblDrienOut";
+            this.lblDrienOut.Size = new System.Drawing.Size(0, 13);
+            this.lblDrienOut.TabIndex = 1;
+            // 
+            // lblEnenOut
+            // 
+            this.lblEnenOut.AutoSize = true;
+            this.lblEnenOut.ForeColor = System.Drawing.Color.DimGray;
+            this.lblEnenOut.Location = new System.Drawing.Point(12, 0);
+            this.lblEnenOut.Name = "lblEnenOut";
+            this.lblEnenOut.Size = new System.Drawing.Size(0, 13);
+            this.lblEnenOut.TabIndex = 0;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -545,119 +663,6 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 28;
             this.label2.Text = "Drieën: ";
-            // 
-            // lblEnenOut
-            // 
-            this.lblEnenOut.AutoSize = true;
-            this.lblEnenOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEnenOut.Location = new System.Drawing.Point(0, 0);
-            this.lblEnenOut.Name = "lblEnenOut";
-            this.lblEnenOut.Size = new System.Drawing.Size(0, 13);
-            this.lblEnenOut.TabIndex = 0;
-            // 
-            // lblDrienOut
-            // 
-            this.lblDrienOut.AutoSize = true;
-            this.lblDrienOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDrienOut.Location = new System.Drawing.Point(0, 25);
-            this.lblDrienOut.Name = "lblDrienOut";
-            this.lblDrienOut.Size = new System.Drawing.Size(0, 13);
-            this.lblDrienOut.TabIndex = 1;
-            // 
-            // lblVierenOut
-            // 
-            this.lblVierenOut.AutoSize = true;
-            this.lblVierenOut.ForeColor = System.Drawing.Color.Black;
-            this.lblVierenOut.Location = new System.Drawing.Point(0, 38);
-            this.lblVierenOut.Name = "lblVierenOut";
-            this.lblVierenOut.Size = new System.Drawing.Size(0, 13);
-            this.lblVierenOut.TabIndex = 2;
-            // 
-            // lblVijfenOut
-            // 
-            this.lblVijfenOut.AutoSize = true;
-            this.lblVijfenOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblVijfenOut.Location = new System.Drawing.Point(0, 51);
-            this.lblVijfenOut.Name = "lblVijfenOut";
-            this.lblVijfenOut.Size = new System.Drawing.Size(0, 13);
-            this.lblVijfenOut.TabIndex = 3;
-            // 
-            // lblZessenOut
-            // 
-            this.lblZessenOut.AutoSize = true;
-            this.lblZessenOut.Location = new System.Drawing.Point(0, 64);
-            this.lblZessenOut.Name = "lblZessenOut";
-            this.lblZessenOut.Size = new System.Drawing.Size(0, 13);
-            this.lblZessenOut.TabIndex = 4;
-            // 
-            // lblTOAKOut
-            // 
-            this.lblTOAKOut.AutoSize = true;
-            this.lblTOAKOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTOAKOut.Location = new System.Drawing.Point(0, 101);
-            this.lblTOAKOut.Name = "lblTOAKOut";
-            this.lblTOAKOut.Size = new System.Drawing.Size(0, 13);
-            this.lblTOAKOut.TabIndex = 5;
-            // 
-            // lblCareOut
-            // 
-            this.lblCareOut.AutoSize = true;
-            this.lblCareOut.Location = new System.Drawing.Point(0, 114);
-            this.lblCareOut.Name = "lblCareOut";
-            this.lblCareOut.Size = new System.Drawing.Size(0, 13);
-            this.lblCareOut.TabIndex = 6;
-            // 
-            // lblFullhouseOut
-            // 
-            this.lblFullhouseOut.AutoSize = true;
-            this.lblFullhouseOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFullhouseOut.Location = new System.Drawing.Point(0, 127);
-            this.lblFullhouseOut.Name = "lblFullhouseOut";
-            this.lblFullhouseOut.Size = new System.Drawing.Size(0, 13);
-            this.lblFullhouseOut.TabIndex = 7;
-            // 
-            // lblKleineStraatOut
-            // 
-            this.lblKleineStraatOut.AutoSize = true;
-            this.lblKleineStraatOut.Location = new System.Drawing.Point(0, 140);
-            this.lblKleineStraatOut.Name = "lblKleineStraatOut";
-            this.lblKleineStraatOut.Size = new System.Drawing.Size(0, 13);
-            this.lblKleineStraatOut.TabIndex = 8;
-            // 
-            // lblGroteStraatOut
-            // 
-            this.lblGroteStraatOut.AutoSize = true;
-            this.lblGroteStraatOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblGroteStraatOut.Location = new System.Drawing.Point(0, 153);
-            this.lblGroteStraatOut.Name = "lblGroteStraatOut";
-            this.lblGroteStraatOut.Size = new System.Drawing.Size(0, 13);
-            this.lblGroteStraatOut.TabIndex = 9;
-            // 
-            // lblYahtzeeOut
-            // 
-            this.lblYahtzeeOut.AutoSize = true;
-            this.lblYahtzeeOut.Location = new System.Drawing.Point(0, 166);
-            this.lblYahtzeeOut.Name = "lblYahtzeeOut";
-            this.lblYahtzeeOut.Size = new System.Drawing.Size(0, 13);
-            this.lblYahtzeeOut.TabIndex = 10;
-            // 
-            // lblTweeenOut
-            // 
-            this.lblTweeenOut.AutoSize = true;
-            this.lblTweeenOut.ForeColor = System.Drawing.Color.Black;
-            this.lblTweeenOut.Location = new System.Drawing.Point(0, 12);
-            this.lblTweeenOut.Name = "lblTweeenOut";
-            this.lblTweeenOut.Size = new System.Drawing.Size(0, 13);
-            this.lblTweeenOut.TabIndex = 11;
-            // 
-            // lblChanceOut
-            // 
-            this.lblChanceOut.AutoSize = true;
-            this.lblChanceOut.ForeColor = System.Drawing.Color.DimGray;
-            this.lblChanceOut.Location = new System.Drawing.Point(0, 179);
-            this.lblChanceOut.Name = "lblChanceOut";
-            this.lblChanceOut.Size = new System.Drawing.Size(0, 13);
-            this.lblChanceOut.TabIndex = 12;
             // 
             // YahtzeeInvoer
             // 
